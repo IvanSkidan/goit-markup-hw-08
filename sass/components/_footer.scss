@@ -1,19 +1,37 @@
 .footer .container {
-    display: flex;
-    align-items: baseline;
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
 }
 
 .footer {
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+
+}
+
+.footer__contacts {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 80px;
+    }
 }
 
 .footer__logo {
     display: inline-block;
     font-family: $logo-font;
-    font-size: 26px;
-    line-height: 1.19px;
+    font-size: 24px;
+    line-height: 1.17px;
     letter-spacing: 0.03em;
     color: $secondary-color;
     margin-bottom: 20px;
@@ -22,25 +40,40 @@
     &:focus {
         color: $secondary-color;
     }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.17px;
+    }
 }
 
 .footer__accent {
     font-family: $logo-font;
     font-size: 26px;
-    line-height: 1.19;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $accent-color;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+    }
 }
-
-
 
 /* Контакти */
 
 .contacts__item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -80,7 +113,21 @@
 // Приєднуйтесь
 
 .join {
-    margin-left: 70px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        margin-left: 70px;
+        margin-right: 0;
+        text-align: start;
+    }
 }
 
 .join__title {
@@ -134,7 +181,19 @@
 // Підпишіться на розсилку
 
 .booking {
-    margin-left: auto;
+    margin-top: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+        text-align: start;
+    }
 }
 
 .booking__text {
@@ -148,11 +207,19 @@
 }
 
 .booking__form {
-    display: flex;
+    display: block;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .booking__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
     font-weight: 400;
     font-size: 16px;
@@ -163,7 +230,6 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 15px 16px;
-    margin-right: 12px;
     background-color: transparent;
 
     &::placeholder {
@@ -177,6 +243,15 @@
     &:focus {
         outline: 1px solid $accent-color;
         border: transparent;
+    }
+
+    @media screen and (min-width: 768px) {
+    width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
+        width: 358px;
     }
 }
 
@@ -193,6 +268,13 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 1199px) {
+        margin-top: 20px;
+    }
+    
 }
 
 .booking__accent {
