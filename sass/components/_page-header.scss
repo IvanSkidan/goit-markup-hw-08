@@ -1,0 +1,117 @@
+// Шапка сторінки
+
+.page-header {
+    background-color: $secondary-color;
+}
+
+// Нижня рамка для portfolio
+
+.box {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ECECEC;
+}
+
+
+.page-header .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+// Навігація сайту
+
+.nav-header {
+    margin-left: 93px;
+}
+
+.nav-header__list {
+    display: flex;
+}
+
+.nav-header__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav-header__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $main-color;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // transition-delay: 250ms;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.nav-header__link.nav-header__link--current {
+    position: relative;
+    color: $accent-color;
+}
+
+.nav-header__link.nav-header__link--current::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    // opacity: 0;
+    // transform: scaleX(0);
+    // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// .nav-link.current:hover::after {
+//     opacity: 1;
+//     transform: scaleX(1);
+// }
+
+.header {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.header__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

@@ -1,0 +1,22 @@
+.logo {
+    font-family: $logo-font;
+    font-size: 26px;
+    line-height: 1.19px;
+    letter-spacing: 0.03em;
+    color: $logo-color;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.logo__accent {
+    font-family: $logo-font;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $accent-color;
+}
+
+.logo:hover,
+.logo:focus {
+    color: $logo-color;
+}
