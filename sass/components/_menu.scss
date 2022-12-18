@@ -135,6 +135,12 @@
     color: $accent-color;
 }
 
+@media screen and (max-width: 479px) {
+    .mobile-contacts-link {
+        font-size: 27px;
+    }
+}
+
 .mobile-mail-link {
     display: block;
     text-decoration: none;
@@ -150,6 +156,8 @@
     // gap: 10px;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .mobile-socials-link {
